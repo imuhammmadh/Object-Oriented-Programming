@@ -79,7 +79,7 @@ let animal2 = new Monkey("Sam", "Grey")
 animal1.run()
 animal2.eatBanana()
 
-//Method Overriding,Super keyword and Constructor Overriding
+Method Overriding, Super keyword and Constructor Overriding
 
 
 class Employee {
@@ -115,3 +115,20 @@ class Programmer extends Employee {
 let employee1 = new Programmer("Muhammad")
 employee1.login()
 employee1.requestLeaves(3)
+
+//Static Method
+
+class Student {
+    constructor(name, standard) {
+        this.name = Student.capitalize(name)
+        this.standard = standard
+    }
+    intro() {
+        console.log(`${this.name} is a student of ${this.standard}th class`);
+    }
+    static capitalize(name) {
+        return name.charAt(0).toUpperCase() + name.substring(1, name.length)
+    }
+}
+let student1 = new Student("muhammad", 10)
+student1.intro()
