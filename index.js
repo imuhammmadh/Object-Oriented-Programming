@@ -79,7 +79,7 @@ let animal2 = new Monkey("Sam", "Grey")
 animal1.run()
 animal2.eatBanana()
 
-Method Overriding, Super keyword and Constructor Overriding
+//Method Overriding, Super keyword and Constructor Overriding
 
 
 class Employee {
