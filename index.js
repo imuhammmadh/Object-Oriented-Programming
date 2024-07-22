@@ -52,3 +52,29 @@ let person3 = new RailwayForm("rohan", 33455, "Jaipur")
 person1.submit()
 person2.cancel()
 
+//Inheritance and Extends
+
+class Animal {
+    constructor(name, color) {
+        this.name = name
+        this.color = color
+    }
+    run() {
+        console.log(`${this.name} is running`);
+    }
+    colorName() {
+        console.log(`This is the ${this.color} of ${this.name}`);
+    }
+}
+
+class Monkey extends Animal {
+    eatBanana() {
+        console.log(`${this.name} is eating banana`);
+    }
+}
+
+let animal1 = new Animal("Tommy", "Black")
+let animal2 = new Monkey("Sam", "Grey")
+
+animal1.run()
+animal2.eatBanana()
