@@ -79,9 +79,14 @@ let animal2 = new Monkey("Sam", "Grey")
 animal1.run()
 animal2.eatBanana()
 
-//Method Overriding and Super
+//Method Overriding,Super keyword and Constructor Overriding
+
 
 class Employee {
+    constructor(name) {
+        this.name = name
+        console.log(`${this.name} is an Employee`);
+    }
     login() {
         console.log(`Employee has logged in`);
     }
@@ -93,6 +98,10 @@ class Employee {
     }
 }
 class Programmer extends Employee {
+    constructor(name) {
+        super(name)
+        console.log(`${name} is a Programmer`);
+    }
     requestCoffee(x) {
         console.log(`Employee has requested ${x} coffees`);
     }
@@ -103,6 +112,6 @@ class Programmer extends Employee {
     }
 }
 
-let employee1 = new Programmer()
+let employee1 = new Programmer("Muhammad")
 employee1.login()
 employee1.requestLeaves(3)
