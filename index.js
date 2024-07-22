@@ -78,3 +78,31 @@ let animal2 = new Monkey("Sam", "Grey")
 
 animal1.run()
 animal2.eatBanana()
+
+//Method Overriding and Super
+
+class Employee {
+    login() {
+        console.log(`Employee has logged in`);
+    }
+    logout() {
+        console.log(`Employee has logged out`);
+    }
+    requestLeaves(leaves) {
+        console.log(`Employee has requested ${leaves} leaves => Auto Approved`);
+    }
+}
+class Programmer extends Employee {
+    requestCoffee(x) {
+        console.log(`Employee has requested ${x} coffees`);
+    }
+    requestLeaves(leaves) {
+        super.requestLeaves(leaves + 1)
+        console.log("One extra Granted");
+        // console.log(`Employee has requested ${leaves + 1} leaves (One Extra)`);
+    }
+}
+
+let employee1 = new Programmer()
+employee1.login()
+employee1.requestLeaves(3)
